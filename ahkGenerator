@@ -1,0 +1,41 @@
+newAHK 
+
+title                 ziel              system Kombination      action                                    timeout
+ahks[0]            github öffnen           win + 3           single                                    true,
+                                                      repeating = nextStep === currentStep      hasTimeout = currentStep:has delay
+                                                      repeating ? loop : single                 hasTimeout : return delayTime : false,
+                                                                                                needsADelay,mightNeedADelay, (if error in this step might need a delay) 
+                                                                                                sobald this.Ahk  einen fehler ausspuckt, 
+
+
+öffneGithubInMeinerWin + NumberOrder   
+
+ahks = [
+      "öffneGithubInMeiner_Win_Number_order",
+]
+
+console.log(`
+  
+                ahk Generator
+
+`);
+
+;öffneGithubInMeiner => Win + NumberOrder
+; mögliche hasX [loop, timeout]
+; currentStepCounter = 0;
+; let ahk = { isLoop: false, isTimeout: false, hasLoop: false, hasTimeout: false  }
+; let hasLoop = false;
+; let hasTimeout = false;
+;ziel : gitHub öffnen 
+;systemDefault = win 3
+;wunschEingabe = windowstaste 3
+;has loop = currentStep:hasX(loop)
+;has timeout = currentStep:hasX(timeout) :hasFunktionen bewirken dass im Test dieser Bereich geprüft werden muss / übergeben werden muss
+                                       ;Im gesamten Testdurchlauf, wird alles simuliert, mit den :hasX Werten 
+                                       ; :hasX Werte bedürfen immer einer prüfung
+                                       
+; return isLoop, isTimeout, hasLoop, hasTimeout
+
+const startAhkTest = (isLoop, isTimeout, hasLoop, hasTimeout) => {
+
+}
